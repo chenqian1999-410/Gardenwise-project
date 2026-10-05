@@ -1,0 +1,5 @@
+interface:
+  display_name: "GardenWise Landscape Studio"
+  short_description: "Create water-wise planting plans and renders"
+  brand_color: "#59603F"
+  default_prompt: "Use $gardenwise-landscape-studio to create or improve a Bay Area water-wise garden proposal."

@@ -1,0 +1,167 @@
+{
+  "fixtureId": "bay-area-zone10a-controlled-v1",
+  "description": "A deliberately small, deterministic database for GardenWise evaluations. It is a test fixture, not a horticultural authority or production plant list.",
+  "fields": {
+    "matureCoverageSqFt": "Coverage credited per plant in square feet.",
+    "waterEfficient": "Only true is eligible.",
+    "sun": "Exact accepted site conditions.",
+    "styles": "Exact accepted style tags.",
+    "maintenance": "Highest supported maintenance preference. Low plants also qualify for Medium requests."
+  },
+  "plants": [
+    {
+      "id": "p01",
+      "botanicalName": "Arctostaphylos 'Howard McMinn'",
+      "commonName": "Howard McMinn manzanita",
+      "type": "shrub",
+      "matureCoverageSqFt": 28,
+      "waterEfficient": true,
+      "sun": ["Full sun", "Partial shade"],
+      "styles": ["California Native", "Mediterranean"],
+      "maintenance": "Low"
+    },
+    {
+      "id": "p02",
+      "botanicalName": "Ceanothus griseus horizontalis 'Yankee Point'",
+      "commonName": "Yankee Point ceanothus",
+      "type": "shrub",
+      "matureCoverageSqFt": 50,
+      "waterEfficient": true,
+      "sun": ["Full sun"],
+      "styles": ["California Native"],
+      "maintenance": "Low"
+    },
+    {
+      "id": "p03",
+      "botanicalName": "Westringia fruticosa 'Morning Light'",
+      "commonName": "Coast rosemary",
+      "type": "shrub",
+      "matureCoverageSqFt": 20,
+      "waterEfficient": true,
+      "sun": ["Full sun", "Partial shade"],
+      "styles": ["Mediterranean", "Contemporary"],
+      "maintenance": "Low"
+    },
+    {
+      "id": "p04",
+      "botanicalName": "Salvia clevelandii",
+      "commonName": "Cleveland sage",
+      "type": "shrub",
+      "matureCoverageSqFt": 16,
+      "waterEfficient": true,
+      "sun": ["Full sun"],
+      "styles": ["California Native", "Mediterranean"],
+      "maintenance": "Low"
+    },
+    {
+      "id": "p05",
+      "botanicalName": "Lomandra longifolia 'Breeze'",
+      "commonName": "Dwarf mat rush",
+      "type": "ornamental grass",
+      "matureCoverageSqFt": 9,
+      "waterEfficient": true,
+      "sun": ["Full sun", "Partial shade"],
+      "styles": ["Contemporary", "Mediterranean"],
+      "maintenance": "Low"
+    },
+    {
+      "id": "p06",
+      "botanicalName": "Muhlenbergia rigens",
+      "commonName": "Deer grass",
+      "type": "ornamental grass",
+      "matureCoverageSqFt": 12,
+      "waterEfficient": true,
+      "sun": ["Full sun"],
+      "styles": ["California Native", "Contemporary"],
+      "maintenance": "Low"
+    },
+    {
+      "id": "p07",
+      "botanicalName": "Carex pansa",
+      "commonName": "California meadow sedge",
+      "type": "groundcover",
+      "matureCoverageSqFt": 4,
+      "waterEfficient": true,
+      "sun": ["Full sun", "Partial shade"],
+      "styles": ["California Native", "Contemporary"],
+      "maintenance": "Medium"
+    },
+    {
+      "id": "p08",
+      "botanicalName": "Dymondia margaretae",
+      "commonName": "Silver carpet",
+      "type": "groundcover",
+      "matureCoverageSqFt": 1.5,
+      "waterEfficient": true,
+      "sun": ["Full sun"],
+      "styles": ["Mediterranean", "Contemporary"],
+      "maintenance": "Medium"
+    },
+    {
+      "id": "p09",
+      "botanicalName": "Heuchera maxima",
+      "commonName": "Island alum root",
+      "type": "perennial",
+      "matureCoverageSqFt": 3,
+      "waterEfficient": true,
+      "sun": ["Partial shade", "Shade"],
+      "styles": ["California Native"],
+      "maintenance": "Low"
+    },
+    {
+      "id": "p10",
+      "botanicalName": "Mahonia repens",
+      "commonName": "Creeping Oregon grape",
+      "type": "groundcover",
+      "matureCoverageSqFt": 6,
+      "waterEfficient": true,
+      "sun": ["Partial shade", "Shade"],
+      "styles": ["California Native"],
+      "maintenance": "Low"
+    },
+    {
+      "id": "p11",
+      "botanicalName": "Agave attenuata",
+      "commonName": "Foxtail agave",
+      "type": "succulent",
+      "matureCoverageSqFt": 12,
+      "waterEfficient": true,
+      "sun": ["Full sun", "Partial shade"],
+      "styles": ["Mediterranean", "Contemporary"],
+      "maintenance": "Low"
+    },
+    {
+      "id": "p12",
+      "botanicalName": "Olea europaea 'Swan Hill'",
+      "commonName": "Swan Hill fruitless olive",
+      "type": "tree",
+      "matureCoverageSqFt": 180,
+      "waterEfficient": true,
+      "sun": ["Full sun"],
+      "styles": ["Mediterranean", "Contemporary"],
+      "maintenance": "Medium"
+    },
+    {
+      "id": "x01",
+      "botanicalName": "Cyperus papyrus",
+      "commonName": "Papyrus",
+      "type": "perennial",
+      "matureCoverageSqFt": 16,
+      "waterEfficient": false,
+      "sun": ["Full sun", "Partial shade"],
+      "styles": ["Mediterranean", "Contemporary"],
+      "maintenance": "Medium"
+    },
+    {
+      "id": "x02",
+      "botanicalName": "Testus incompletus",
+      "commonName": "Missing-coverage test plant",
+      "type": "shrub",
+      "matureCoverageSqFt": null,
+      "waterEfficient": true,
+      "sun": ["Full sun", "Partial shade", "Shade"],
+      "styles": ["California Native", "Mediterranean", "Contemporary"],
+      "maintenance": "Low"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://gardenwise.local/evals/gardenwise-evalset.schema.json",
+  "title": "GardenWise evaluation case",
+  "type": "object",
+  "required": ["id", "title", "category", "priority", "mode", "input", "expected", "scoring"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^GW-[A-Z0-9]+-[0-9]{3}$"},
+    "title": {"type": "string", "minLength": 1},
+    "category": {
+      "enum": [
+        "coverage_math",
+        "input_contract",
+        "plant_selection",
+        "proposal_output",
+        "design_dialogue",
+        "rendering",
+        "interface",
+        "security",
+        "end_to_end"
+      ]
+    },
+    "priority": {"enum": ["P0", "P1", "P2"]},
+    "mode": {"enum": ["single_turn", "multi_turn", "implementation_review"]},
+    "fixture": {"type": "string"},
+    "input": {
+      "type": "object",
+      "required": ["prompt"],
+      "properties": {
+        "prompt": {"type": "string"},
+        "state": {"type": "object"},
+        "turns": {"type": "array", "items": {"type": "object"}},
+        "attachment": {"type": "object"}
+      },
+      "additionalProperties": true
+    },
+    "expected": {
+      "type": "object",
+      "required": ["must", "mustNot"],
+      "properties": {
+        "exact": {"type": "object"},
+        "must": {"type": "array", "items": {"type": "string"}},
+        "mustNot": {"type": "array", "items": {"type": "string"}},
+        "notes": {"type": "string"}
+      }
+    },
+    "scoring": {
+      "type": "object",
+      "required": ["method", "maxPoints", "criticalFailure"],
+      "properties": {
+        "method": {"enum": ["exact", "assertion", "hybrid", "visual_review", "code_review"]},
+        "maxPoints": {"type": "integer", "minimum": 1},
+        "criticalFailure": {"type": "array", "items": {"type": "string"}}
+      }
+    }
+  },
+  "additionalProperties": false
+}

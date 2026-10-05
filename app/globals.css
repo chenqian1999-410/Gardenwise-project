@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  background: #edf0df;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: #30271c;
+  background-color: #edf0df;
+  background-image:
+    radial-gradient(circle at 12% 6%, rgba(255, 252, 242, 0.92), transparent 31%),
+    radial-gradient(circle at 88% 14%, rgba(128, 144, 96, 0.16), transparent 34%),
+    linear-gradient(to right, rgba(89, 96, 63, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(89, 96, 63, 0.045) 1px, transparent 1px);
+  background-size: auto, auto, 30% 100%, 100% 180px;
+  background-attachment: fixed;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+.field {
+  @apply w-full rounded-none border border-[#c8b995] bg-[#fffaf0]/80 px-4 py-3 text-sm text-[#30271c] outline-none transition focus:border-[#68704a] focus:ring-4 focus:ring-[#68704a]/10;
+}
+
+.label {
+  @apply text-xs font-semibold uppercase tracking-[0.16em] text-[#68704a];
+}
+
+.panel {
+  @apply border border-[#c8b995] bg-[#f9f3e7]/90 shadow-soft backdrop-blur;
+}
+
+.focus-ring {
+  @apply focus:outline-none focus:ring-4 focus:ring-moss/20;
+}
+
+.project-studio {
+  min-height: calc(100vh - 65px);
+}
+
+.studio-visual {
+  position: absolute;
+  inset: -6%;
+  background-image: url('/editorial/garden-studio-dawn.png');
+  background-position: center;
+  background-size: cover;
+  opacity: 0.2;
+  filter: saturate(0.56) sepia(0.08);
+  animation: studio-drift 24s ease-in-out infinite alternate;
+}
+
+.studio-wash {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(238, 241, 225, 0.97) 0%, rgba(246, 243, 229, 0.88) 42%, rgba(229, 235, 215, 0.81) 100%),
+    linear-gradient(to bottom, rgba(255, 250, 240, 0.34), rgba(255, 250, 240, 0.74));
+}
+
+@keyframes studio-drift {
+  from { transform: scale(1.01) translate3d(0, 0, 0); }
+  to { transform: scale(1.07) translate3d(-1.2%, -0.7%, 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .studio-visual { animation: none; }
+}
